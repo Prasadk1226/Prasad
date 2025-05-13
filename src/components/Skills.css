@@ -1,0 +1,38 @@
+/* Skills Section */
+.skills-section {
+    min-height: 90vh;
+    padding: 60px 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .skill-item {
+    margin-bottom: 30px;
+  }
+  
+  .skill-name {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .skill-progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #b2ebf2;
+  }
+  
+
+  .skills-section {
+    background: linear-gradient(to bottom right, #f7f7f7, #ffffff);
+  }
+  
+  .section-title {
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+  }
+  

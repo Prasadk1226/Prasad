@@ -1,0 +1,11 @@
+/* src/styles/smoothScroll.css */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Optional custom smooth scroll container styles */
+  .scroll-container {
+    overflow: hidden;
+    height: 100vh;
+  }
+  

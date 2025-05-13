@@ -1,0 +1,55 @@
+.parallax-container {
+  margin-top: 10vh;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .parallax {
+    /* background-image: url('https://wallpapers.com/images/hd/4k-programming-quotes-poster-cgfhpg0wtn6kbj7l.jpg'); */
+    background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJvbnQlMjBlbmQlMjBkZXZlbG9wZXJ8ZW58MHx8MHx8fDA%3D');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    /* margin-top: 15vh; */
+  }
+  
+  .threeD {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .scale-fade {
+    animation: scaleFadeIn 1s ease forwards;
+  }
+  
+  @keyframes scaleFadeIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .threeD {
+      padding: 20px;
+    }
+  }
+  

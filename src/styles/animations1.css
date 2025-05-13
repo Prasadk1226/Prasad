@@ -1,0 +1,105 @@
+/* src/styles/animations.css */
+
+/* Reveal effect */
+.reveal {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: parallax 10s infinite linear;
+}
+
+@keyframes parallax {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(50px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 3D effect */
+.threeD {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.threeD:hover {
+  transform: rotateY(10deg);
+}
+
+/* Scale and Fade */
+.scale-fade {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 1s forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slideUp {
+    animation: slideUp 0.6s ease-out;
+  }
+  
