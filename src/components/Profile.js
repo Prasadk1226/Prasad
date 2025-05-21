@@ -777,10 +777,10 @@ const Profile = () => {
             textAlign: 'center',
           }}
         >
-          <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: '20px', color: '#fff', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+          <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: '20px', color: '#fa7500', textShadow: '2px 2px 4px rgba(78, 36, 36, 0.5)' }}>
             Hello, I'm Prasad Kancheti
           </Typography>
-          <Typography variant="h4" sx={{ marginBottom: '40px', color: '#eee', textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}>
+          <Typography variant="h4" sx={{ marginBottom: '40px', color: '#fa9600', textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}>
             A Passionate Front-End Developer
           </Typography>
           <Button
