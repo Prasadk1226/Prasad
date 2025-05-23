@@ -1,38 +1,93 @@
-/* Skills Section */
-.skills-section {
-    min-height: 90vh;
-    padding: 60px 20px;
-    background-color: #e0f7fa;
-    text-align: center;
+@media (max-width: 600px) {
+  /* Override the SkillCard styling for mobile view */
+  .MuiGrid-item {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
-  
-  .section-title {
-    margin-bottom: 40px;
-    font-weight: bold;
-  }
-  
-  .skill-item {
-    margin-bottom: 30px;
-  }
-  
-  .skill-name {
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .skill-progress {
-    height: 10px;
-    border-radius: 5px;
-    background-color: #b2ebf2;
-  }
-  
 
-  .skills-section {
-    background: linear-gradient(to bottom right, #f7f7f7, #ffffff);
+  .MuiGrid-item > div {
+    width: 90% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    /* backdrop-filter: blur(10px) !important; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   }
-  
-  .section-title {
-    font-family: 'Segoe UI', sans-serif;
-    letter-spacing: 1px;
+
+  .MuiGrid-item > div:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
   }
-  
+
+  .MuiGrid-item h6 {
+    font-size: 1rem !important;
+    margin-bottom: 6px !important;
+    color: #333 !important;
+  }
+
+  .MuiGrid-item .MuiBox-root {
+    width: 100% !important;
+    margin-top: 8px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .MuiLinearProgress-root {
+    height: 8px !important;
+    border-radius: 4px !important;
+  }
+
+  .MuiLinearProgress-bar {
+    transition: width 1s ease-in-out !important;
+  }
+
+  .MuiTypography-body2 {
+    font-size: 0.875rem !important;
+    color: #666 !important;
+    margin-top: 4px !important;
+  }
+}
+
+
+/* Default styles — no changes to the desktop layout */
+@media (max-width: 600px) {
+  /* Target SkillCard styling when screen is small */
+  .css-skill-card {
+    width: 100% !important;
+    height: auto !important;
+    padding: 16px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 12px;
+  }
+
+  .css-skill-card:hover {
+    transform: scale(1.02) !important;
+  }
+
+  .css-skill-name {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .css-skill-progress {
+    flex: 1;
+    margin: 0 10px !important;
+  }
+
+  .css-skill-value {
+    min-width: 40px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+  }
+}

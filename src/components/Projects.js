@@ -1,69 +1,8 @@
-// // src/components/Projects.js
-// import React from 'react';
-// import { Box, Card, CardContent, Typography, Button } from '@mui/material';
-// import { motion } from 'framer-motion';
-// import "./Projects.css"
-
-
-
-// const projects = [
-//   {
-//     title: 'Roommate App',
-//     description: 'A platform for students to find PGs with unique features.',
-//     link: 'https://room-mate-app-xdk4.vercel.app/',
-//   },
-//   {
-//     title: 'Spotify Clone',
-//     description: 'A clone of Spotify with real-time content using the Spotify API.',
-//     link: 'https://prasadk1226.github.io/Spotify_Clone/',
-//   },
-//   {
-//     title: 'Simple House Website',
-//     description: 'A responsive website for a restaurant using HTML5 and CSS3.',
-//     link: 'https://prasadk1226.github.io/Project-work/',
-//   },
-// ];
-
-// const Projects = () => {
-//   return (
-//     <Box className="projects-section">
-//       <Typography variant="h4" align="center" className="section-title">
-//         My Projects
-//       </Typography>
-//       <Box className="projects-container">
-//         {projects.map((project, index) => (
-//           <motion.div
-//             key={index}
-//             initial={{ opacity: 0, y: 50 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.5, delay: index * 0.3 }}
-//             className="project-motion"
-//           >
-//             <Card className="project-card">
-//               <CardContent>
-//                 <Typography variant="h6" className="project-title">{project.title}</Typography>
-//                 <Typography variant="body2" color="textSecondary" className="project-description">
-//                   {project.description}
-//                 </Typography>
-//                 <Button variant="contained" color="primary" href={project.link} target="_blank">
-//                   View Project
-//                 </Button>
-//               </CardContent>
-//             </Card>
-//           </motion.div>
-//         ))}
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Projects;
 
 // src/components/Projects.js
 import React from 'react';
 import { Box, CardContent, Typography, Button, styled, keyframes } from '@mui/material';
 import { motion } from 'framer-motion';
-import "./Projects.css";
 
 const projectsData = [
   {
@@ -80,6 +19,11 @@ const projectsData = [
     title: 'Simple House Website',
     description: 'A responsive website for a restaurant using HTML5 and CSS3.',
     link: 'https://prasadk1226.github.io/Project-work/',
+  },
+  {
+    title: 'Crypto Currence site',
+    description: 'A responsive React application that displays the realtime data of cryptocurrencies.',
+    link: 'https://lancierecrypto.vercel.app/',
   },
 ];
 

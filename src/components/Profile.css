@@ -1,55 +1,171 @@
+/* src/components/Profile.css */
+
 .parallax-container {
   margin-top: 10vh;
-    position: relative;
-    height: 80vh;
-    overflow: hidden;
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.parallax {
+  background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm-jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJvbnQlMjBlbmQlMjBkZXZlbG9wZXJ8ZW58MHx8MHx8fDA%3D');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.threeD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.d3-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 400px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.title-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fa7500;
+  text-shadow: 2px 2px 4px rgba(78, 36, 36, 0.5);
+}
+
+.subtitle-text {
+  margin-bottom: 40px;
+  color: #fa9600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.contact-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff6f00;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #e55d00;
+  transform: scale(1.05);
+}
+
+.scale-fade {
+  animation: scaleFadeIn 1s ease forwards;
+}
+
+@keyframes scaleFadeIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
   }
-  
-  .parallax {
-    /* background-image: url('https://wallpapers.com/images/hd/4k-programming-quotes-poster-cgfhpg0wtn6kbj7l.jpg'); */
-    background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJvbnQlMjBlbmQlMjBkZXZlbG9wZXJ8ZW58MHx8MHx8fDA%3D');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    /* margin-top: 15vh; */
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 899px) {
   .threeD {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .content-section {
+    width: 90%;
+    margin: 0px auto 40px auto;
+  }
+  .d3-section {
+    width: 90%;
+    margin: auto;
+    height: 45vh;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 900px) {
+  .threeD {
+    flex-direction: row;
+  }
+  .content-section {
+    padding-right: 20px;
+  }
+  .d3-section {
+    height: auto;
+  }
+}
+
+@media (max-width: 899px) {
+  .threeD {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    justify-content: flex-start;
   }
-  
-  .scale-fade {
-    animation: scaleFadeIn 1s ease forwards;
+
+  .d3-section {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 1.2;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
   }
-  
-  @keyframes scaleFadeIn {
-    0% {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+
+  .content-section {
+    padding: 10px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .threeD {
-      padding: 20px;
-    }
+
+  .title-text {
+    font-size: 1.8rem;
   }
-  
+
+  .subtitle-text {
+    font-size: 1.2rem;
+  }
+
+  .contact-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
